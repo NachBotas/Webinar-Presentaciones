@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="gf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE766"/><stop offset=".55" stop-color="#FFD400"/><stop offset="1" stop-color="#F0B400"/></linearGradient>
+    <linearGradient id="gs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7AE00"/><stop offset="1" stop-color="#B98600"/></linearGradient>
+    <linearGradient id="gt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF6B0"/><stop offset=".6" stop-color="#FFE34D"/><stop offset="1" stop-color="#FFD400"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b2723"/><stop offset=".45" stop-color="#4a443d"/><stop offset="1" stop-color="#151311"/></linearGradient>
+    <linearGradient id="grs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1c1a17"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
+    <radialGradient id="gb" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#5a534a"/><stop offset=".6" stop-color="#25221e"/><stop offset="1" stop-color="#0f0e0c"/></radialGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <ellipse cx="102" cy="181" rx="74" ry="11" fill="#000" opacity=".22" filter="url(#blur)"/>
+  <!-- cuerpo -->
+  <path d="M38 94 L118 106 L118 176 L38 164 Z" fill="url(#gf)"/>
+  <path d="M118 106 L166 93 L166 162 L118 176 Z" fill="url(#gs)"/>
+  <!-- cinta vertical en el cuerpo -->
+  <path d="M70 98.8 L86 101.2 L86 171.2 L70 168.8 Z" fill="url(#gr)"/>
+  <path d="M134 101.7 L150 97.4 L150 166.4 L134 171 Z" fill="url(#grs)"/>
+  <!-- sombra bajo la tapa -->
+  <path d="M38 94 L118 106 L166 93 L166 99 L118 112 L38 100 Z" fill="#000" opacity=".16"/>
+  <!-- tapa -->
+  <path d="M30 78 L122 92 L122 108 L30 94 Z" fill="url(#gf)"/>
+  <path d="M122 92 L174 78 L174 94 L122 108 Z" fill="url(#gs)"/>
+  <path d="M30 78 L82 64 L174 78 L122 92 Z" fill="url(#gt)"/>
+  <!-- cinta en la tapa -->
+  <path d="M68 83.8 L88 86.8 L88 102.8 L68 99.8 Z" fill="url(#gr)"/>
+  <path d="M132 89.3 L152 83.9 L152 99.9 L132 105.3 Z" fill="url(#grs)"/>
+  <path d="M68 83.8 L88 86.8 L140 72.5 L120 69.6 Z" fill="#2f2b26"/>
+  <path d="M132 89.3 L152 83.9 L98 75.6 L78 81 Z" fill="#3b362f"/>
+  <!-- brillo en la tapa -->
+  <path d="M40 79 L82 67.5 L104 70.8 L62 82.3 Z" fill="#fff" opacity=".35"/>
+  <!-- moño -->
+  <path d="M109 77 C 88 60, 70 48, 74 40 C 78 31, 100 44, 109 77 Z" fill="url(#gb)"/>
+  <path d="M109 77 C 128 58, 150 50, 150 41 C 150 31, 122 42, 109 77 Z" fill="url(#gb)"/>
+  <path d="M80 41 C 86 41, 98 52, 104 66" stroke="#8a8174" stroke-width="2.5" fill="none" opacity=".7" stroke-linecap="round"/>
+  <path d="M144 42 C 138 43, 126 52, 116 64" stroke="#8a8174" stroke-width="2.5" fill="none" opacity=".6" stroke-linecap="round"/>
+  <path d="M106 76 C 98 86, 92 94, 86 100 L 92 103 C 98 96, 104 88, 110 79 Z" fill="#1b1916"/>
+  <path d="M112 76 C 120 86, 128 92, 136 96 L 132 101 C 124 96, 116 88, 109 79 Z" fill="#141210"/>
+  <ellipse cx="109.5" cy="75" rx="9" ry="7" fill="url(#gb)"/>
+  <ellipse cx="107" cy="72.5" rx="3" ry="2" fill="#fff" opacity=".35"/>
+  <!-- destellos -->
+  <path d="M170 34 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3 Z" fill="#FFD400"/>
+  <path d="M34 46 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 Z" fill="#FFD400" opacity=".9"/>
+  <circle cx="182" cy="66" r="3" fill="#FFD400" opacity=".8"/>
+  <circle cx="22" cy="72" r="2.5" fill="#FFD400" opacity=".7"/>
+</svg>

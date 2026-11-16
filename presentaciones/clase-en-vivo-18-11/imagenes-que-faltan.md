@@ -6,73 +6,73 @@ Total: **40 imágenes**.
 
 ## Apertura
 
-| Slide | Archivo | Tipo | Qué tiene que mostrar |
-|---|---|---|---|
-| 1 | `img/hook-dos-publicaciones.jpg` | Captura | Captura de las dos publicaciones de Nico, lado a lado (catálogo y tradicional) |
-| 3 | `img/nico-deposito-compu.jpg` | Foto (pantalla completa) | Nico en el depósito con la compu abierta en sus publicaciones |
-| 8 | `img/nico-2.jpg` | Foto | Foto de Nico |
-| 12 | `img/panel-ventas-dia-2.jpg` | Captura | Captura del panel de ventas del día |
-| 13 | `img/facturacion-mensual-2.jpg` | Captura | Captura de la facturación mensual |
-| 14 | `img/ranking-publicaciones-catalogo-2.jpg` | Captura | Captura del ranking o de las publicaciones catálogo |
-| 15 | `img/deposito.jpg` | Foto (pantalla completa) | Foto o video corto del depósito con mercadería |
+| Slide | Estado | Archivo | Tipo | Qué tiene que mostrar |
+|---|---|---|---|---|
+| 1 | ❌ falta | `img/hook-dos-publicaciones.jpg` | Captura | Captura de las dos publicaciones de Nico, lado a lado (catálogo y tradicional) |
+| 3 | ✅ puesta | `img/nico-deposito-compu.jpg` | Foto (pantalla completa) | Nico en el depósito con la compu abierta en sus publicaciones |
+| 8 | ✅ puesta | `img/nico.jpg` | Foto | Foto de Nico |
+| 12 | ✅ puesta | `img/panel-ventas-dia.jpg` | Captura | Captura del panel de ventas del día |
+| 13 | ✅ puesta | `img/facturacion-mensual.jpg` | Captura | Captura de la facturación mensual |
+| 14 | ✅ puesta | `img/ranking-publicaciones-catalogo.jpg` | Captura | Captura del ranking o de las publicaciones catálogo |
+| 15 | ✅ puesta | `img/deposito.jpg` | Foto (pantalla completa) | Foto o video corto del depósito con mercadería |
 
 ## Paso 1 · Demanda
 
-| Slide | Archivo | Tipo | Qué tiene que mostrar |
-|---|---|---|---|
-| 21 | `img/competencia-1000-vendidos.jpg` | Captura | Una publicación de la competencia con «+1.000 vendidos» (ejemplo, sin marca real) |
-| 38 | `img/busqueda-mercado-libre-resultados-2.jpg` | Captura | Captura de una búsqueda en Mercado Libre con resultados |
-| 40 | `img/claude-analizando-productos-2.jpg` | Captura | Captura de Claude analizando productos |
-| 42 | `img/videollamada-joaquin-nico-2.jpg` | Foto | Foto de la videollamada de Joaquín con Nico |
-| 43 | `img/joaquin-primeras-ventas.jpg` | Captura | Captura de sus primeras ventas |
-| 44 | `img/marcos-2.jpg` | Foto | Foto de Marcos |
-| 45 | `img/marcos-ventas.jpg` | Captura | Captura de sus ventas |
-| 50 | `img/regalo1-analizador.jpg` | Captura | Una vista previa del documento |
-| 51 | `img/regalo1-chat.jpg` | Captura | Captura del chat con el link |
+| Slide | Estado | Archivo | Tipo | Qué tiene que mostrar |
+|---|---|---|---|---|
+| 21 | ❌ falta | `img/competencia-1000-vendidos.jpg` | Captura | Una publicación de la competencia con «+1.000 vendidos» (ejemplo, sin marca real) |
+| 38 | ❌ falta | `img/busqueda-mercado-libre-resultados.jpg` | Captura | Captura de una búsqueda en Mercado Libre con resultados |
+| 40 | ❌ falta | `img/claude-analizando-productos.jpg` | Captura | Captura de Claude analizando productos |
+| 42 | ❌ falta | `img/videollamada-joaquin-nico.jpg` | Foto | Foto de la videollamada de Joaquín con Nico |
+| 43 | ❌ falta | `img/joaquin-primeras-ventas.jpg` | Captura | Captura de sus primeras ventas |
+| 44 | ❌ falta | `img/marcos.jpg` | Foto | Foto de Marcos |
+| 45 | ❌ falta | `img/marcos-ventas.jpg` | Captura | Captura de sus ventas |
+| 50 | ❌ falta | `img/regalo1-analizador.jpg` | Captura | Una vista previa del documento |
+| 51 | ❌ falta | `img/regalo1-chat.jpg` | Captura | Captura del chat con el link |
 
 ## Interludio · Ego
 
-| Slide | Archivo | Tipo | Qué tiene que mostrar |
-|---|---|---|---|
-| 56 | `img/nico-esa-epoca.jpg` | Foto (pantalla completa) | Foto de Nico en esa época: armando paquetes, depósito más chico |
-| 60 | `img/envios-antes-despues.jpg` | Captura | Captura de ventas: el mes antes de delegar los envíos y unos meses después |
+| Slide | Estado | Archivo | Tipo | Qué tiene que mostrar |
+|---|---|---|---|---|
+| 56 | ❌ falta | `img/nico-esa-epoca.jpg` | Foto (pantalla completa) | Foto de Nico en esa época: armando paquetes, depósito más chico |
+| 60 | ❌ falta | `img/envios-antes-despues.jpg` | Captura | Captura de ventas: el mes antes de delegar los envíos y unos meses después |
 
 ## Paso 2 · Posición
 
-| Slide | Archivo | Tipo | Qué tiene que mostrar |
-|---|---|---|---|
-| 68 | `img/hook-dos-publicaciones.jpg` | Captura | La misma captura del slide 1, las dos publicaciones |
-| 69 | `img/catalogo-vs-tradicional.jpg` | Captura | Las dos capturas con la etiqueta «CATÁLOGO» y «TRADICIONAL» |
-| 70 | `img/pagina-catalogo-oferta-destacada-2.jpg` | Captura | Captura de una página de catálogo con la oferta destacada y «Otras opciones de compra» |
-| 71 | `img/pagina-catalogo-signo-pregunta-2.jpg` | Captura | La misma página de catálogo, con un signo de pregunta sobre la oferta destacada |
-| 78 | `img/demo-publicacion-marcada.jpg` | Captura | Captura de la publicación con las fallas marcadas (flechas y círculos) |
-| 84 | `img/nico-vs-competencia.jpg` | Captura | Capturas de una publicación de Nico y de la competencia, comparadas |
-| 86 | `img/panel-oscar-2.jpg` | Captura | Captura del panel de Oscar |
-| 87 | `img/mensaje-celeste-2.jpg` | Captura | Captura o mensaje de Celeste |
-| 88 | `img/reputacion-nico-diego.jpg` | Captura | Captura del termómetro de reputación de Nico, en verde. . Después, la reputación de Diego |
-| 94 | `img/vista-previa-documento-4.jpg` | Captura | Una vista previa del documento |
-| 95 | `img/regalo3-chat.jpg` | Captura | Captura del chat con el link |
+| Slide | Estado | Archivo | Tipo | Qué tiene que mostrar |
+|---|---|---|---|---|
+| 68 | ❌ falta | `img/hook-dos-publicaciones.jpg` | Captura | La misma captura del slide 1, las dos publicaciones |
+| 69 | ❌ falta | `img/catalogo-vs-tradicional.jpg` | Captura | Las dos capturas con la etiqueta «CATÁLOGO» y «TRADICIONAL» |
+| 70 | ❌ falta | `img/pagina-catalogo-oferta-destacada.jpg` | Captura | Captura de una página de catálogo con la oferta destacada y «Otras opciones de compra» |
+| 71 | ❌ falta | `img/pagina-catalogo-signo-pregunta.jpg` | Captura | La misma página de catálogo, con un signo de pregunta sobre la oferta destacada |
+| 78 | ❌ falta | `img/demo-publicacion-marcada.jpg` | Captura | Captura de la publicación con las fallas marcadas (flechas y círculos) |
+| 84 | ❌ falta | `img/nico-vs-competencia.jpg` | Captura | Capturas de una publicación de Nico y de la competencia, comparadas |
+| 86 | ✅ puesta | `img/panel-oscar.jpg` | Captura | Captura del panel de Oscar |
+| 87 | ❌ falta | `img/mensaje-celeste.jpg` | Captura | Captura o mensaje de Celeste |
+| 88 | ❌ falta | `img/reputacion-nico-diego.jpg` | Captura | Captura del termómetro de reputación de Nico, en verde. . Después, la reputación de Diego |
+| 94 | ❌ falta | `img/regalo2-optimizador.jpg` | Captura | Una vista previa del documento |
+| 95 | ❌ falta | `img/regalo2-chat.jpg` | Captura | Captura del chat con el link |
 
 ## Paso 3 · Capital
 
-| Slide | Archivo | Tipo | Qué tiene que mostrar |
-|---|---|---|---|
-| 108 | `img/metricas-ventas-producto-2.jpg` | Captura | Captura de las métricas de ventas por producto |
-| 114 | `img/pablo-2.jpg` | Foto | Foto de Pablo |
-| 115 | `img/panel-pablo-2.jpg` | Captura | Captura del panel de Pablo |
-| 120 | `img/regalo3-calculadora.jpg` | Captura | Una vista previa de la calculadora |
-| 121 | `img/chat-link-6.jpg` | Captura | Captura del chat con el link |
+| Slide | Estado | Archivo | Tipo | Qué tiene que mostrar |
+|---|---|---|---|---|
+| 108 | ❌ falta | `img/metricas-ventas-producto.jpg` | Captura | Captura de las métricas de ventas por producto |
+| 114 | ❌ falta | `img/pablo.jpg` | Foto | Foto de Pablo |
+| 115 | ✅ puesta | `img/panel-pablo.jpg` | Captura | Captura del panel de Pablo |
+| 120 | ❌ falta | `img/regalo3-calculadora.jpg` | Captura | Una vista previa de la calculadora |
+| 121 | ❌ falta | `img/regalo3-chat.jpg` | Captura | Captura del chat con el link |
 
 ## Cierre
 
-| Slide | Archivo | Tipo | Qué tiene que mostrar |
-|---|---|---|---|
-| 131 | `img/collage-confianza.jpg` | Captura | Collage chico: panel de ventas, depósito, publicaciones catálogo |
-| 147 | `img/qr-agenda.jpg` | QR | El link o el QR de agenda |
-| 148 | `img/qr-agenda.jpg` | QR | El link o el QR de agenda |
-| 150 | `img/qr-agenda.jpg` | QR | El link o el QR de agenda, grande |
-| 153 | `img/qr-agenda.jpg` | QR | El link o el QR de agenda |
-| 154 | `img/qr-agenda.jpg` | QR | Foto de Nico en el depósito, con el link o el QR de agenda abajo |
+| Slide | Estado | Archivo | Tipo | Qué tiene que mostrar |
+|---|---|---|---|---|
+| 131 | ✅ puesta | `img/collage-confianza.jpg` | Captura | Collage chico: panel de ventas, depósito, publicaciones catálogo |
+| 147 | ❌ falta | `img/qr-agenda.jpg` | QR | El link o el QR de agenda |
+| 148 | ❌ falta | `img/qr-agenda.jpg` | QR | El link o el QR de agenda |
+| 150 | ❌ falta | `img/qr-agenda.jpg` | QR | El link o el QR de agenda, grande |
+| 153 | ❌ falta | `img/qr-agenda.jpg` | QR | El link o el QR de agenda |
+| 154 | ❌ falta | `img/qr-agenda.jpg` | QR | Foto de Nico en el depósito, con el link o el QR de agenda abajo |
 
 ## Tips
 
