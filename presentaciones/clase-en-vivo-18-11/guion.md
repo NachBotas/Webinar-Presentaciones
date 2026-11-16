@@ -713,7 +713,7 @@ Mientras tanto, ya se están agendando. [Leer en voz alta los nombres reales que
 
 Ahora sí, vamos con algunas preguntas que me están dejando en el chat.
 
-- [ ] CONFIRMAR: ¿hay ronda de preguntas en vivo? Si no la hay, se pasa directo a la 130
+- [ ] CONFIRMAR: ¿hay ronda de preguntas en vivo? Si no la hay, se pasa directo a la 148
 
 ### 147. Preguntas plantadas
 
