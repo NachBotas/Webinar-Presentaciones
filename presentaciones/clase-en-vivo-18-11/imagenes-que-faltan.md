@@ -9,12 +9,12 @@ Total: **40 imágenes**.
 | Slide | Archivo | Tipo | Qué tiene que mostrar |
 |---|---|---|---|
 | 1 | `img/s001.jpg` | Captura | Captura de las dos publicaciones de Nico, lado a lado (catálogo y tradicional) |
-| 3 | `img/s003.jpg` | Captura | Nico en el depósito con la compu abierta en sus publicaciones |
+| 3 | `img/s003.jpg` | Foto (pantalla completa) | Nico en el depósito con la compu abierta en sus publicaciones |
 | 8 | `img/s008.jpg` | Foto | Foto de Nico |
 | 12 | `img/s012.jpg` | Captura | Captura del panel de ventas del día |
 | 13 | `img/s013.jpg` | Captura | Captura de la facturación mensual |
 | 14 | `img/s014.jpg` | Captura | Captura del ranking o de las publicaciones catálogo |
-| 15 | `img/s015.jpg` | Foto o video | Foto o video corto del depósito con mercadería |
+| 15 | `img/s015.jpg` | Foto (pantalla completa) | Foto o video corto del depósito con mercadería |
 
 ## Paso 1 · Demanda
 
@@ -23,18 +23,18 @@ Total: **40 imágenes**.
 | 21 | `img/s021.jpg` | Captura | Una publicación de la competencia con «+1.000 vendidos» (ejemplo, sin marca real) |
 | 38 | `img/s038.jpg` | Captura | Captura de una búsqueda en Mercado Libre con resultados |
 | 40 | `img/s040.jpg` | Captura | Captura de Claude analizando productos |
-| 42 | `img/s042.jpg` | Foto o video | Foto de la videollamada de Joaquín con Nico |
+| 42 | `img/s042.jpg` | Foto | Foto de la videollamada de Joaquín con Nico |
 | 43 | `img/s043.jpg` | Captura | Captura de sus primeras ventas |
 | 44 | `img/s044.jpg` | Foto | Foto de Marcos |
 | 45 | `img/s045.jpg` | Captura | Captura de sus ventas |
 | 49 | `img/s049.jpg` | Captura | Una vista previa del documento |
-| 50 | `img/s050.jpg` | QR / link | Captura del chat con el link |
+| 50 | `img/s050.jpg` | Captura | Captura del chat con el link |
 
 ## Interludio · Ego
 
 | Slide | Archivo | Tipo | Qué tiene que mostrar |
 |---|---|---|---|
-| 57 | `img/s057.jpg` | Foto | Foto de Nico en esa época: armando paquetes, depósito más chico |
+| 57 | `img/s057.jpg` | Foto (pantalla completa) | Foto de Nico en esa época: armando paquetes, depósito más chico |
 | 59 | `img/s059.jpg` | Captura | Captura de ventas: el mes antes de delegar los envíos y unos meses después |
 
 ## Paso 2 · Posición
@@ -51,7 +51,7 @@ Total: **40 imágenes**.
 | 84 | `img/s084.jpg` | Captura | Captura o mensaje de Celeste |
 | 85 | `img/s085.jpg` | Captura | Captura del termómetro de reputación de Nico, en verde. . Después, la reputación de Diego |
 | 90 | `img/s090.jpg` | Captura | Una vista previa del documento |
-| 91 | `img/s091.jpg` | QR / link | Captura del chat con el link |
+| 91 | `img/s091.jpg` | Captura | Captura del chat con el link |
 
 ## Paso 3 · Capital
 
@@ -61,7 +61,7 @@ Total: **40 imágenes**.
 | 110 | `img/s110.jpg` | Foto | Foto de Pablo |
 | 111 | `img/s111.jpg` | Captura | Captura del panel de Pablo |
 | 115 | `img/s115.jpg` | Captura | Una vista previa de la calculadora |
-| 116 | `img/s116.jpg` | QR / link | Captura del chat con el link |
+| 116 | `img/s116.jpg` | Captura | Captura del chat con el link |
 
 ## Cierre
 
@@ -74,3 +74,10 @@ Total: **40 imágenes**.
 | 147 | `img/s147.jpg` | QR / link | El link o el QR de agenda |
 | 148 | `img/s148.jpg` | QR / link | Foto de Nico en el depósito, con el link o el QR de agenda abajo |
 
+## Tips
+
+- **QR de agenda (slides 141, 142, 144, 147 y 148):** es la misma imagen. Generala una vez y copiala con los 5 nombres.
+- **Slides 3, 15 y 57:** la foto ocupa toda la pantalla y el texto va arriba a la izquierda. Conviene una foto horizontal con lo importante a la derecha.
+- **Capturas:** van dentro de un marco de navegador. Recortalas sin la barra del navegador y en horizontal.
+- **Fotos de personas (8, 42, 44, 110):** van en un marco de polaroid. Sirven mejor verticales o cuadradas.
+- **Abajo a la derecha va tu cámara:** apretá **C** en la presentación para ver esa zona y chequear que no tape nada.
