@@ -1,13 +1,13 @@
 <title>Plano del Webinar Growing ML</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
 <style>
-/* Layout: plano de obra. Barra de pestañas fija arriba, cada pestaña es un entregable (A–H). Mapa macro como columna de estaciones con curva de tensión al costado. */
+/* Layout: una sola columna, de arriba hacia abajo. Pestañas arriba; solo las comparaciones van lado a lado. */
 :root{
   --paper:#f6f2ea; --card:#fffdf8; --ink:#16130f; --mut:#6f675b; --line:rgba(22,19,15,.14);
   --y:#ffd400; --yk:#16130f; --red:#e5402f; --grn:#14995c; --blu:#2f62d8;
   --act1:#ffe9e5; --act2:#fff6c7; --act3:#e3f3ea;
-  --f-d:'Fraunces',Georgia,serif; --f-b:'Inter',system-ui,sans-serif; --f-m:'JetBrains Mono',ui-monospace,monospace;
+  --f-d:'Poppins',Arial,sans-serif; --f-b:'Poppins',Arial,sans-serif; --f-m:'Poppins',Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --paper:#121110; --card:#1c1a17; --ink:#f3eee4; --mut:#a59d8f; --line:rgba(255,255,255,.12);
@@ -18,14 +18,14 @@
   --y:#ffd400; --yk:#16130f; --red:#ff6a5a; --grn:#3fcf8a; --blu:#7aa2ff;
   --act1:#3a1f1b; --act2:#3a3214; --act3:#16301f; color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font:15px/1.55 var(--f-b);margin:0}
+body{background:var(--paper);color:var(--ink);font:15.5px/1.65 var(--f-b);margin:0}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 header.hero{background:var(--ink);color:var(--paper)}
 header.hero .wrap{padding-block:34px 26px;display:grid;gap:14px}
 .kick{font:700 12px var(--f-m);letter-spacing:.14em;text-transform:uppercase;color:var(--y)}
-h1{font:800 clamp(30px,5vw,54px)/1.02 var(--f-d);margin:0;letter-spacing:-.02em;text-wrap:balance}
-h1 em{font-style:italic;font-weight:500;color:var(--y)}
+h1{font:700 clamp(28px,4.4vw,44px)/1.15 var(--f-d);margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--y)}
 .thesis{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch;max-width:980px}
 .thesis div{border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:14px 16px;font-size:14px;min-width:0}
 .thesis b{display:block;font:700 11px var(--f-m);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
@@ -42,7 +42,7 @@ nav.tabs a[aria-current="page"]{background:var(--y);color:var(--yk)}nav.tabs a[a
 nav.tabs a:focus-visible{outline:2px solid var(--y);outline-offset:2px}
 main .wrap{padding-block:30px 60px}
 section.view{display:none}section.view.on{display:block}
-h2{font:800 clamp(24px,3.4vw,34px)/1.1 var(--f-d);margin:0 0 6px;letter-spacing:-.015em;text-wrap:balance}
+h2{font:700 clamp(22px,3vw,30px)/1.2 var(--f-d);margin:0 0 6px;letter-spacing:-.015em;text-wrap:balance}
 .lede{color:var(--mut);max-width:68ch;margin:0 0 24px}
 h3{font:800 20px/1.2 var(--f-d);margin:0}
 .chip{display:inline-flex;align-items:center;gap:6px;font:700 11px var(--f-m);letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 9px;border:1px solid var(--line);white-space:nowrap}
@@ -52,7 +52,7 @@ h3{font:800 20px/1.2 var(--f-d);margin:0}
 .mono{font-family:var(--f-m);font-size:12px}
 
 /* ---- mapa macro ---- */
-.macro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:28px;align-items:start}
+.macro{display:grid;grid-template-columns:1fr;gap:28px}
 @media (max-width:900px){.macro{grid-template-columns:1fr}}
 .acts{display:grid;gap:18px}
 .act{border-radius:20px;padding:16px;background:var(--act1)}
@@ -71,7 +71,7 @@ h3{font:800 20px/1.2 var(--f-d);margin:0}
 .st .tt small{display:block;font:500 12.5px/1.35 var(--f-b);color:var(--mut);margin-top:3px}
 .st .min{font:700 12px var(--f-m);color:var(--mut);white-space:nowrap}
 .st.loop .id{background:var(--y);color:var(--yk)}
-.side{position:sticky;top:70px;display:grid;gap:16px}
+.side{display:grid;gap:16px}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
 .panel h3{margin-bottom:4px}
 .panel p{margin:0;color:var(--mut);font-size:13.5px}
@@ -94,7 +94,7 @@ svg text{fill:var(--mut);font:600 10px var(--f-m)}
 .node>summary::-webkit-details-marker{display:none}
 .node>summary:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
 .node .nid{font:700 12px var(--f-m);background:var(--y);color:var(--yk);border-radius:8px;padding:5px 8px}
-.node .nt{font:800 17px/1.25 var(--f-d)}
+.node .nt{font:600 16px/1.35 var(--f-d)}
 .node .nt small{display:block;font:500 13px/1.4 var(--f-b);color:var(--mut);margin-top:3px}
 .node .nr{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 .node[open]>summary{border-bottom:1px solid var(--line)}
@@ -107,7 +107,7 @@ svg text{fill:var(--mut);font:600 10px var(--f-m)}
 .f b{display:block;font:700 10.5px var(--f-m);letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
 .f p{margin:0}
 .f.copy{background:color-mix(in srgb,var(--y) 12%,var(--card))}
-.f.copy p{font:500 italic 15.5px/1.55 var(--f-d)}
+.f.copy p{font:500 16px/1.6 var(--f-b)}
 .f.cree p{color:var(--red)}.f.nueva p{color:var(--grn)}
 .f.rev p{font-weight:700}
 .bar{height:6px;border-radius:6px;background:var(--line);overflow:hidden;width:70px}
@@ -139,11 +139,29 @@ td .chip{margin:1px 0}
 .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font:800 26px var(--f-d);color:var(--red)}
 .step h4{margin:0 0 4px;font:800 17px var(--f-d)}
 .step p{margin:0 0 6px}
-.step .say{font:500 italic 15px/1.5 var(--f-d);background:color-mix(in srgb,var(--y) 14%,var(--card));border-radius:10px;padding:10px 12px;margin-top:6px}
+.step .say{font:500 15px/1.6 var(--f-b);background:color-mix(in srgb,var(--y) 14%,var(--card));border-radius:10px;padding:10px 12px;margin-top:6px}
 .note{border-left:4px solid var(--red);background:color-mix(in srgb,var(--red) 8%,var(--card));padding:12px 14px;border-radius:0 12px 12px 0;margin:0 0 22px;font-size:14px}
 .qa{display:grid;gap:10px;margin-top:26px}
 .qa div{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;font-size:14px}
 @media (prefers-reduced-motion:no-preference){.st{transition:border-color .2s,transform .2s}.st:hover{transform:translateX(3px)}}
+
+/* nodo apilado */
+.nbody{display:grid;gap:14px;padding:16px 18px 20px}
+.say{background:color-mix(in srgb,var(--y) 16%,var(--card));border-radius:14px;padding:14px 16px}
+.say b,.row b,.cmp2 b{display:block;font:600 11px var(--f-b);letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.say p{margin:0;font-size:16px;line-height:1.6}
+.cmp2{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);gap:8px;align-items:stretch}
+.cmp2>div{border-radius:14px;padding:12px 14px;min-width:0}
+.cmp2 .a{background:color-mix(in srgb,var(--red) 10%,var(--card))}
+.cmp2 .d{background:color-mix(in srgb,var(--grn) 12%,var(--card))}
+.cmp2 .a p{color:var(--red);margin:0;font-weight:600}.cmp2 .d p{color:var(--grn);margin:0;font-weight:600}
+.cmp2 .x{display:grid;place-items:center;font:700 22px var(--f-b);color:var(--mut);padding:0}
+@media (max-width:600px){.cmp2{grid-template-columns:1fr}.cmp2 .x{transform:rotate(90deg);height:24px}}
+.rows{display:grid;gap:0;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:170px minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.row b{margin:2px 0 0}.row p{margin:0}
+@media (max-width:600px){.row{grid-template-columns:1fr;gap:2px}}
+.row.warn p{color:var(--red);font-weight:500}
 </style>
 
 <header class="hero"><div class="wrap">
@@ -162,8 +180,8 @@ td .chip{margin:1px 0}
 <main><div class="wrap">
 
 <section class="view" id="v-mapa">
-  <h2>B · Mapa macro</h2>
-  <p class="lede">Tres actos y doce bloques. Tocá una estación para abrir su flujo detallado. Cada estación con ID amarillo abre o cierra al menos un misterio. A la derecha, la curva de tensión de los casi 100 minutos.</p>
+  <h2>Mapa del webinar</h2>
+  <p class="lede">El webinar de punta a punta, en orden. Tocá un bloque para ver su detalle. Abajo, cómo sube y baja la tensión durante los casi 100 minutos.</p>
   <div class="macro">
     <div class="acts" id="acts"></div>
     <aside class="side">
@@ -182,14 +200,14 @@ td .chip{margin:1px 0}
 </section>
 
 <section class="view" id="v-flujo">
-  <h2>C · Diagrama de flujo micro</h2>
-  <p class="lede">Cada bloque con todos sus nodos. Cada nodo tiene los 16 campos pedidos. Tocá un nodo para abrirlo; los del bloque elegido arrancan abiertos.</p>
+  <h2>Paso a paso</h2>
+  <p class="lede">Elegí un bloque arriba. Cada paso se abre con un toque: primero ves qué dice Nico, después cómo cambia lo que piensa el espectador, y abajo el resto del detalle.</p>
   <div class="blocknav" id="blocknav"></div>
   <div id="block"></div>
 </section>
 
 <section class="view" id="v-auditoria">
-  <h2>A · Auditoría del HTML actual</h2>
+  <h2>Qué pasa con el deck actual</h2>
   <p class="lede">El deck actual tiene 154 slides en el orden Demanda → Posición → Capital. Casi todo el material sirve: cambia el orden, se funde el pilar Capital dentro de Conversión y Productos, y falta construir los videos, el discurso del enemigo y la matemática de conversión.</p>
   <div class="audit" id="auditTop"></div>
   <h3 style="margin:8px 0 12px">Qué pasa con cada tramo del deck actual</h3>
@@ -197,40 +215,40 @@ td .chip{margin:1px 0}
 </section>
 
 <section class="view" id="v-creencias">
-  <h2>D · Matriz de cambio de creencias</h2>
+  <h2>Creencias que cambiamos</h2>
   <p class="lede">Cada creencia que hoy frena al espectador, qué la rompe, qué la reemplaza y en qué nodo pasa.</p>
   <div class="tbl"><table id="beliefTbl"></table></div>
 </section>
 
 <section class="view" id="v-loops">
-  <h2>E · Mapa de open loops</h2>
+  <h2>Misterios (open loops)</h2>
   <p class="lede">Cada misterio se abre con una pregunta real y se cierra con una revelación. Ninguno queda colgando. Las líneas muestran cuánto tiempo vive cada uno.</p>
   <div class="loopviz" id="loopviz"></div>
   <div class="tbl"><table id="loopTbl"></table></div>
 </section>
 
 <section class="view" id="v-evidencias">
-  <h2>F · Mapa de evidencias</h2>
+  <h2>Pruebas que necesitamos</h2>
   <p class="lede">Cada afirmación fuerte con la prueba que necesita. Revisé el deck y las carpetas de Drive que me pasaste: verde es prueba que ya tenemos, amarillo es parcial o hay que confirmar, rojo es lo que falta conseguir.</p>
   <div class="audit" id="evTop"></div>
   <div class="tbl"><table id="evTbl"></table></div>
 </section>
 
 <section class="view" id="v-venta">
-  <h2>G · Mapa de transición comercial</h2>
+  <h2>Cómo pasamos a la venta</h2>
   <p class="lede">Los doce pasos que llevan del último pilar a la reunión, sin salto brusco y sin sonar desesperado.</p>
   <div class="steps" id="saleSteps"></div>
 </section>
 
 <section class="view" id="v-diapos">
-  <h2>H · Arquitectura de diapositivas</h2>
+  <h2>Slides propuestas</h2>
   <p class="lede">Propuesta de slides por nodo, para cuando apruebes el mapa. “Reusa” indica el número de slide del deck actual que se recicla; “Nueva” es material a producir. No es el HTML final.</p>
   <div class="audit" id="slTop"></div>
   <div class="tbl"><table id="slTbl"></table></div>
 </section>
 
 <section class="view" id="v-calidad">
-  <h2>Auditoría de calidad</h2>
+  <h2>Chequeo de calidad</h2>
   <p class="lede">Las preguntas del punto 18 aplicadas al plano, con lo que corregí antes de entregarlo.</p>
   <div class="qa" id="qa"></div>
 </section>
@@ -518,7 +536,7 @@ const allSlides=allNodes.flatMap(n=>n.s.map(s=>({node:n.id,block:n.block,t:s[0],
 
 $("#stats").innerHTML=`<span><b>${BLOCKS.length}</b>bloques</span><span><b>${allNodes.length}</b>nodos</span><span><b>${Math.round(totMin)}</b>minutos</span><span><b>${LOOPS.length}</b>open loops</span><span><b>${allSlides.length}</b>slides propuestas</span><span><b>${EVID.filter(e=>e[6]==='pend').length}</b>pruebas por conseguir</span>`;
 
-const TABS=[["mapa","B","Mapa macro"],["flujo","C","Flujo micro"],["auditoria","A","Auditoría"],["creencias","D","Creencias"],["loops","E","Open loops"],["evidencias","F","Evidencias"],["venta","G","Transición comercial"],["diapos","H","Diapositivas"],["calidad","✓","Calidad"]];
+const TABS=[["mapa","1","Mapa"],["flujo","2","Paso a paso"],["creencias","3","Creencias"],["loops","4","Misterios"],["evidencias","5","Pruebas"],["venta","6","Venta"],["diapos","7","Slides"],["auditoria","8","Deck actual"],["calidad","9","Calidad"]];
 $("#tabs").innerHTML=TABS.map(t=>`<a href="#${t[0]}" data-v="${t[0]}"><span>${t[1]}</span>${t[2]}</a>`).join("");
 
 /* mapa macro */
@@ -559,9 +577,21 @@ function showBlock(id){
   document.querySelectorAll("#blocknav button").forEach(el=>el.setAttribute("aria-pressed",el.dataset.b===b.id));
   const m=b.nodes.reduce((y,n)=>y+n.dur,0);
   $("#block").innerHTML=`<div class="bhead"><div class="meta"><span><b>${b.id}</b> · ${ACTS[b.act][0]}</span><span>${b.nodes.length} nodos</span><span>${m.toFixed(1)} min</span></div><h3>${esc(b.t)}</h3><p>${esc(b.fn)}</p></div><div class="nodes">`+
-  b.nodes.map(n=>`<details class="node" open><summary><span class="nid">${n.id}</span><span class="nt">${esc(n.n)}<small>${esc(n.fn)}</small></span><span class="nr"><span class="chip">${n.dur} min</span>${/^ninguno/i.test(n.pend)?'<span class="chip ok">Listo</span>':'<span class="chip pend">Pendientes</span>'}<span class="bar" title="Tensión ${n.t}/10"><i style="width:${n.t*10}%"></i></span></span></summary><div class="ngrid">`+
-    F.map(f=>`<div class="f ${f[2]||""}"><b>${f[1]}</b><p>${esc(n[f[0]])}</p></div>`).join("")+
-    `<div class="f"><b>Duración estimada</b><p>${n.dur} minutos · tensión ${n.t}/10</p></div><div class="f"><b>ID del nodo</b><p class="mono">${n.id}</p></div></div></details>`).join("")+`</div>`;
+  b.nodes.map((n,i)=>`<details class="node"${i===0?" open":""}><summary><span class="nid">${n.id}</span><span class="nt">${esc(n.n)}<small>${esc(n.fn)}</small></span><span class="nr"><span class="chip">${n.dur} min</span>${/^ninguno/i.test(n.pend)?'<span class="chip ok">Listo</span>':'<span class="chip pend">Falta material</span>'}</span></summary><div class="nbody">
+<div class="say"><b>Qué dice Nico</b><p>${esc(n.copy)}</p></div>
+<div class="cmp2"><div class="a"><b>Antes piensa</b><p>${esc(n.cree)}</p></div><div class="x">→</div><div class="d"><b>Después piensa</b><p>${esc(n.nueva)}</p></div></div>
+<div class="rows">
+<div class="row"><b>Qué se muestra</b><p>${esc(n.vis)}</p></div>
+<div class="row"><b>Qué entiende</b><p>${esc(n.rev)}</p></div>
+<div class="row"><b>Qué siente</b><p>${esc(n.emo)}</p></div>
+<div class="row"><b>Prueba</b><p>${esc(n.prueba)}</p></div>
+<div class="row"><b>Dolor que toca</b><p>${esc(n.dolor)}</p></div>
+<div class="row"><b>Argumento</b><p>${esc(n.arg)}</p></div>
+<div class="row"><b>Misterio</b><p>${esc(n.loop)}</p></div>
+<div class="row"><b>Cómo sigue</b><p>${esc(n.trans)}</p></div>
+<div class="row"><b>Para la venta</b><p>${esc(n.com)}</p></div>
+${/^ninguno/i.test(n.pend)?"":`<div class="row warn"><b>Falta</b><p>${esc(n.pend)}</p></div>`}
+</div></div></details>`).join("")+`</div>`;
 }
 
 /* tablas */
