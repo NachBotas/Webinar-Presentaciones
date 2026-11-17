@@ -1,0 +1,258 @@
+<title>Plano Webinar V2</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: una sola columna de arriba hacia abajo, bloques numerados en el orden real del webinar */
+:root{
+  --bg:#ffffff; --fg:#1f2d3d; --muted:#5f6b7a; --line:#e3e7ec; --soft:#f3f5f8;
+  --accent:#ffe600; --accent-ink:#0f1a27; --bad:#d6343f; --good:#178a4c; --dark:#0f1a27; --dark-fg:#ffffff;
+  --font:"Poppins", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0f1621; --fg:#e8ecf1; --muted:#9aa6b4; --line:#253142; --soft:#172131;
+  --accent:#ffe600; --accent-ink:#0f1a27; --bad:#ff6b74; --good:#4fd18a; --dark:#1c2838; --dark-fg:#ffffff; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0f1621; --fg:#e8ecf1; --muted:#9aa6b4; --line:#253142; --soft:#172131;
+  --accent:#ffe600; --accent-ink:#0f1a27; --bad:#ff6b74; --good:#4fd18a; --dark:#1c2838; --dark-fg:#ffffff; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 80px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{line-height:1.2;text-wrap:balance;margin:0}
+h1{font-size:clamp(28px,5vw,40px);font-weight:700}
+h2{font-size:24px;font-weight:700}
+h3{font-size:19px;font-weight:600}
+p{margin:0}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tag{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:12px;letter-spacing:.06em;padding:3px 10px;text-transform:uppercase}
+.lead{font-size:18px;color:var(--muted);max-width:65ch}
+.domino{background:var(--accent);color:var(--accent-ink);padding:28px;display:flex;flex-direction:column;gap:12px}
+.domino q{font-size:clamp(20px,3.2vw,26px);font-weight:600;line-height:1.35;quotes:"“" "”"}
+.domino small{font-size:15px}
+.story{display:flex;flex-direction:column;gap:14px;max-width:65ch}
+.beliefs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:720px){.beliefs{grid-template-columns:1fr}}
+.belief{border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.belief .no{color:var(--bad);font-weight:600}
+.belief .yes{color:var(--good);font-weight:600}
+.block{border-top:2px solid var(--fg);padding-top:18px;display:flex;flex-direction:column;gap:14px}
+.block-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+.slides{font-size:13px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.shift{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:stretch}
+@media (max-width:620px){.shift{grid-template-columns:1fr}.shift .arrow{display:none}}
+.shift div{background:var(--soft);padding:12px 14px;min-width:0}
+.shift .after{background:var(--dark);color:var(--dark-fg)}
+.shift b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.shift .before b{color:var(--bad)} .shift .after b{color:var(--accent)}
+.arrow{align-self:center;font-weight:700;color:var(--muted)}
+.says{border-left:4px solid var(--accent);padding-left:14px;font-style:italic;max-width:65ch}
+dl{display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 16px;margin:0;font-size:15px}
+@media (max-width:620px){dl{grid-template-columns:1fr}dt{margin-top:6px}}
+dt{font-weight:600}
+dd{margin:0;color:var(--muted)}
+ol.steps{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px;font-size:15px}
+.falta{color:var(--bad);font-weight:600}
+.tablewrap{overflow-x:auto;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--soft)}
+td:first-child{font-weight:600}
+.pend{display:flex;flex-direction:column;gap:8px;margin:0;padding-left:20px}
+footer{font-size:13px;color:var(--muted)}
+</style>
+
+<div class="wrap">
+
+<header style="display:flex;flex-direction:column;gap:12px">
+  <span class="eyebrow">Clase en vivo 18/11 · Nico González · Growing ML</span>
+  <h1>Plano del webinar, versión 2</h1>
+  <p class="lead">Armado con la lógica del Perfect Webinar: cada bloque tiene que hacer que la persona deje de creer algo, empiece a creer otra cosa, y vea la prueba. Los números de slide corresponden al Canva “Webinar Nicolas V2” (125 slides).</p>
+</header>
+
+<section class="domino">
+  <span class="eyebrow" style="color:var(--accent-ink)">La idea que sostiene toda la clase (Big Domino)</span>
+  <q>Vender más en Mercado Libre no depende de adivinar qué comprar ni de pagar más publicidad. Depende de 3 decisiones que se aprenden: elegir productos con demanda, elegir dónde competir y convertir las visitas en ventas que dejen plata.</q>
+  <small><b>Segunda conclusión, para la venta:</b> si son decisiones que se aprenden, tiene sentido aprenderlas al lado de alguien que las toma todos los días.</small>
+</section>
+
+<section class="story">
+  <h2>La historia, en cuatro párrafos</h2>
+  <p>Arrancamos con dos publicaciones del mismo producto: una vende todos los días y la otra casi nada. La gente tira sospechosos (precio, Ads, fotos, algoritmo) y le prometemos que antes del final va a entender la diferencia. Mostramos las excusas que circulan y dejamos abierta la intriga: hay una métrica que desnuda tu negocio y te manda al frente.</p>
+  <p>Nico cuenta su camino: arrancó hace 3 años con $60.000, compró, vendió y recompró, se creyó que sabía todo, no quería soltar los envíos y cuando escuchó a gente que sabía más, triplicó. Muestra sus números y su depósito. Por haber vivido eso está podrido de los que enseñan a escalar sin haber tocado un depósito.</p>
+  <p>Ahí aparece la idea central y los tres secretos. El primero rompe “necesito más visitas”: la conversión. El segundo rompe “soy chico, no puedo competir”: Catálogo y tradicional, dónde pelear. El tercero rompe “sin capital no tengo chance”: productos ganadores, investigar antes de comprar. Cada secreto cierra con un caso real y una escena de futuro.</p>
+  <p>Hacemos el repaso, imaginamos el negocio a 120 días para los dos avatares y volvemos a la historia de Nico: hay dos formas de ser dueño. La diferencia entre donde estás y donde querés llegar es información más hacer. Dos caminos: solo o acompañado. Ahí entra Growing ML, para quién es, sus 5 etapas, los casos, y las inscripciones abiertas con la reunión personalizada.</p>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:14px">
+  <h2>Las tres creencias que hay que romper</h2>
+  <div class="beliefs">
+    <div class="belief">
+      <span class="tag">Vehículo · Secreto 1</span>
+      <span class="no">“Para vender más necesito más visitas o más publicidad.”</span>
+      <span class="yes">“Hay variables concretas que puedo diagnosticar y mejorar.”</span>
+    </div>
+    <div class="belief">
+      <span class="tag">Interna · Secreto 2</span>
+      <span class="no">“Soy chico o estoy arrancando: no puedo competir.”</span>
+      <span class="yes">“No tengo que saber todo desde el día uno para empezar a competir.”</span>
+    </div>
+    <div class="belief">
+      <span class="tag">Externa · Secreto 3</span>
+      <span class="no">“Sin capital, tiempo ni proveedores no tengo oportunidad.”</span>
+      <span class="yes">“Puedo decidir con datos con los recursos que tengo.”</span>
+    </div>
+  </div>
+</section>
+
+<h2>Bloque por bloque</h2>
+
+<section class="block">
+  <div class="block-head"><span class="tag">01</span><h3>Gancho y promesa</h3><span class="slides">Slides 1–6</span></div>
+  <div class="shift"><div class="before"><b>Antes piensa</b>“Vendo poco y no sé por qué.”</div><span class="arrow">→</span><div class="after"><b>Después piensa</b>“Quiero saber qué diferencia a esas dos publicaciones.”</div></div>
+  <p class="says">“Mismo producto. Una vende todos los días, la otra casi nada. ¿Qué pensás que es? Antes de que termine la clase lo vas a entender, con mis números.”</p>
+  <dl><dt>Incluye</dt><dd>Dos publicaciones, cinco sospechosos al chat, promesa, para quién es (el que arranca y el que está estancado), 3 regalos en vivo.</dd>
+  <dt>Prueba</dt><dd><span class="falta">Falta:</span> capturas de las dos publicaciones, sin etiqueta.</dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">02</span><h3>Las excusas y la métrica que te manda al frente</h3><span class="slides">Slides 7–15</span></div>
+  <div class="shift"><div class="before"><b>Antes piensa</b>“El problema está afuera: opiniones, algoritmo, Ads, la agencia.”</div><span class="arrow">→</span><div class="after"><b>Después piensa</b>“El problema está adentro, y hay una métrica que lo muestra.”</div></div>
+  <p class="says">“Hay una métrica que desnuda tu negocio y te manda al frente. En un rato te muestro cuál es.”</p>
+  <dl><dt>Incluye</dt><dd>Tres frases que escuchás siempre, videos con excusas, excusa vs. diagnóstico, “si duplicás la publicidad, ¿duplicás tus ventas?”, causa afuera, métrica oculta.</dd>
+  <dt>Prueba</dt><dd><span class="falta">Falta:</span> los videos de afuera (20 a 40 segundos cada uno).</dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">03</span><h3>La historia de Nico (Epiphany Bridge)</h3><span class="slides">Slides 16–28</span></div>
+  <div class="shift"><div class="before"><b>Antes piensa</b>“Él es distinto a mí, ya sabía todo.”</div><span class="arrow">→</span><div class="after"><b>Después piensa</b>“Pasó por donde estoy yo y cambió su forma de pensar.”</div></div>
+  <ol class="steps">
+    <li><b>Arranque:</b> hace 3 años, con $60.000 (16).</li>
+    <li><b>El camino:</b> compro, vendo, recompro → me creo que sé todo → suelto los envíos → x3 y +200 ventas por día (17).</li>
+    <li><b>Lo que le costó:</b> <span class="falta">falta la historia real</span> (18).</li>
+    <li><b>Me sentía el mejor</b> y no escuchaba: “soltá los envíos”, mis excusas (19–21).</li>
+    <li><b>La decisión y el resultado:</b> delegó la tarea, no el criterio, y triplicó (22).</li>
+    <li><b>La lección:</b> “Ese día entendí que era un pichi. ¿Lo estás haciendo o solo lo sabés?” (23).</li>
+    <li><b>Prueba:</b> facturación de 30 días, 7 días, Top 9, depósito, “¿por qué confiar?” (24–28).</li>
+  </ol>
+  <dl><dt>Prueba</dt><dd>Paneles reales ya cargados. <span class="falta">Falta:</span> captura antes y después de delegar los envíos.</dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">04</span><h3>Por eso estoy podrido</h3><span class="slides">Slides 29–32</span></div>
+  <div class="shift"><div class="before"><b>Antes piensa</b>“Alguien me lo va a resolver.”</div><span class="arrow">→</span><div class="after"><b>Después piensa</b>“Nadie va a tener mi hambre. Tengo que aprender a decidir.”</div></div>
+  <p class="says">“Por eso estoy podrido de ver gente que nunca tocó un depósito y te enseña a escalar.”</p>
+  <dl><dt>Incluye</dt><dd>Vendehumos y consultores, 5 preguntas para quien te promete escalar, la agencia vs. vos, “nadie va a tener tu hambre”.</dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">05</span><h3>La idea central y los 3 secretos</h3><span class="slides">Slides 33–35</span></div>
+  <p class="says">“Vender más no depende de adivinar ni de pagar más publicidad. Depende de 3 decisiones que se aprenden.”</p>
+  <dl><dt>Incluye</dt><dd>Big Domino, mapa de los 3 secretos, “sin más vueltas, arranquemos”.</dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">06</span><h3>Secreto 1 · Conversión</h3><span class="slides">Slides 36–58</span></div>
+  <div class="shift"><div class="before"><b>Antes piensa</b>“Necesito más visitas o más publicidad.”</div><span class="arrow">→</span><div class="after"><b>Después piensa</b>“Antes de gastar más, tengo que ver dónde se pierden las ventas.”</div></div>
+  <dl><dt>Pregunta al chat</dt><dd>¿Cuántas visitas tuviste ayer y cuántas ventas?</dd>
+  <dt>Incluye</dt><dd>La epifanía de Nico, qué es la tasa de conversión, 100 personas, la fórmula con el panel real (15,9%), 8.000 visitas en tres escenarios, facturar no es ganar, 990 que se fueron, los 10 puntos, demo de una publicación.</dd>
+  <dt>Caso</dt><dd>Pablo: aprendió a leer sus métricas (55).</dd>
+  <dt>Escena de futuro</dt><dd>“Imaginate que mañana abrís tu panel y detectás qué publicaciones desperdician visitas” (56).</dd>
+  <dt>Cierre</dt><dd>Regalo 1: SOP Optimizador de Publicaciones (57).</dd>
+  <dt>Falta</dt><dd><span class="falta">Historia real de la epifanía (38) y la publicación de la demo (44).</span></dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">07</span><h3>Secreto 2 · Catálogo y tradicional</h3><span class="slides">Slides 59–76</span></div>
+  <div class="shift"><div class="before"><b>Antes piensa</b>“Soy chico o estoy arrancando, no puedo competir.”</div><span class="arrow">→</span><div class="after"><b>Después piensa</b>“Puedo aprender qué hace competitiva una oferta y elegir dónde pelear.”</div></div>
+  <dl><dt>Pregunta al chat</dt><dd>¿Te parece que ya es tarde para entrar a Mercado Libre?</dd>
+  <dt>Incluye</dt><dd>Revelación (una es Catálogo, la otra tradicional), cómo funciona la ficha, en Catálogo el más barato suele ganar pero igual se gana mucha plata eligiendo dónde pelear, en tradicional podés vender más caro dominando tus números, tabla comparativa, demo “así elijo dónde pelear”, “no todo va a Catálogo”.</dd>
+  <dt>Casos</dt><dd>Oscar (Catálogo), Celeste, Joaquín y Germán: “no hace falta saber todo desde el día uno”.</dd>
+  <dt>Escena de futuro</dt><dd>“Imaginá tus publicaciones compitiendo por compradores que ya están buscando tu producto” (75).</dd>
+  <dt>Falta</dt><dd><span class="falta">Capturas de Catálogo y tradicional, ficha de Catálogo, Celeste, Joaquín y Germán.</span></dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">08</span><h3>Secreto 3 · Productos ganadores</h3><span class="slides">Slides 77–92</span></div>
+  <div class="shift"><div class="before"><b>Antes piensa</b>“Sin capital, tiempo ni proveedores no tengo oportunidad.”</div><span class="arrow">→</span><div class="after"><b>Después piensa</b>“Puedo investigar antes de poner la plata y decidir con lo que tengo.”</div></div>
+  <dl><dt>Pregunta al chat</dt><dd>¿Cuánta plata creés que hace falta para arrancar bien?</dd>
+  <dt>Incluye</dt><dd>Encuesta de cómo elegiste tu último producto, la habitación llena de cajas, se paga dos veces, forma vieja y nueva, la regla de las 3 preguntas, producto A vs. B, la cuenta de $20.000, 1-2-3 (más stock, mejorar, sacar).</dd>
+  <dt>Casos y objeciones</dt><dd>Cristian (arrancó de cero), “no tengo tiempo” y “no sé si puedo invertir” trabajadas acá adentro (89).</dd>
+  <dt>Escena de futuro</dt><dd>“Imaginate evaluar una oportunidad antes de llenar tu depósito de cajas” (90).</dd>
+  <dt>Cierre</dt><dd>Regalo 2: SOP Analizador de Productos Ganadores (91) y la fórmula completa (92).</dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">09</span><h3>Repaso y futuro a 120 días</h3><span class="slides">Slides 93–98</span></div>
+  <div class="shift"><div class="before"><b>Antes piensa</b>“Son muchas cosas sueltas.”</div><span class="arrow">→</span><div class="after"><b>Después piensa</b>“Son decisiones, y me veo tomándolas.”</div></div>
+  <dl><dt>Incluye</dt><dd>Lo que vimos, “imaginate tu negocio dentro de 120 días” con una columna para cada avatar, “no se trata de publicar, se trata de decidir”, antes y después, regalo 3: Calculadora de rentabilidad de productos.</dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">10</span><h3>Dos formas de ser dueño y la decisión</h3><span class="slides">Slides 99–105</span></div>
+  <div class="shift"><div class="before"><b>Antes piensa</b>“Lo voy a hacer solo, ya entendí.”</div><span class="arrow">→</span><div class="after"><b>Después piensa</b>“Información más hacer. Acompañado llego más rápido.”</div></div>
+  <p class="says">“La diferencia entre donde estás y donde querés llegar es la información y el hacer. Si hacés sin información, das vueltas en círculos. ¿Qué decisión querés tomar?”</p>
+  <dl><dt>Incluye</dt><dd>Vuelta a la historia (“me creí que me las sabía todas”), dos formas de ser dueño, información + hacer, la pregunta, dos caminos, 120 días, “ahora sí: cómo trabajar conmigo”.</dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">11</span><h3>Growing ML</h3><span class="slides">Slides 106–119</span></div>
+  <div class="shift"><div class="before"><b>Antes piensa</b>“Otro curso más.”</div><span class="arrow">→</span><div class="after"><b>Después piensa</b>“Es trabajar sobre mi cuenta, con un plan y alguien al lado.”</div></div>
+  <dl><dt>Incluye</dt><dd>Qué es (120 días, lo hacés vos con nosotros al lado), “ya compré cursos”, para quién es y para quién no, “¿sirve para mi categoría?”, las 5 etapas, todo lo que incluye, bono por agendar en vivo, casos de Celeste, Marcos y Diego, “ninguno lo hizo solo”.</dd>
+  <dt>Falta</dt><dd><span class="falta">El bono real (no se inventa), capturas de consultorías, pruebas de Marcos y Diego.</span></dd></dl>
+</section>
+
+<section class="block">
+  <div class="block-head"><span class="tag">12</span><h3>Inscripciones abiertas y cierre</h3><span class="slides">Slides 120–125</span></div>
+  <dl><dt>Incluye</dt><dd>Inscripciones abiertas, qué pasa en la reunión (5 pasos), dos tipos de personas, “lo tengo que hablar con mi pareja”, “no quiero que dependas de mí”, agendá tu reunión.</dd>
+  <dt>Falta</dt><dd><span class="falta">QR o link de agenda.</span></dd></dl>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:14px">
+  <h2>Dónde se responde cada objeción</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Objeción</th><th>Dónde se trabaja</th><th>Slides</th></tr></thead>
+    <tbody>
+      <tr><td>“Mercado Libre está saturado”</td><td>Secreto 2: elegir dónde pelear</td><td>59–76</td></tr>
+      <tr><td>“No tengo experiencia”</td><td>Historia de Nico y Joaquín / Germán</td><td>16–23, 74</td></tr>
+      <tr><td>“No tengo capital”</td><td>Secreto 3, con números de ejemplo</td><td>77–92</td></tr>
+      <tr><td>“No tengo tiempo”</td><td>Dentro del secreto 3</td><td>89</td></tr>
+      <tr><td>“Ya compré cursos”</td><td>Enemigo y presentación de Growing ML</td><td>29–32, 108</td></tr>
+      <tr><td>“¿Por qué confiar en Nico?”</td><td>Números, depósito y demos reales</td><td>24–28</td></tr>
+      <tr><td>“¿Y si no me funciona?”</td><td>Para quién es y no, sirve para tu categoría, reunión</td><td>109–110, 121</td></tr>
+      <tr><td>“Lo hablo con mi pareja o socio”</td><td>Cierre</td><td>123</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:14px">
+  <h2>Qué caso prueba qué</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Caso</th><th>Creencia que respalda</th><th>Slide</th></tr></thead>
+    <tbody>
+      <tr><td>Pablo</td><td>Vehículo: leer tus métricas cambia el resultado</td><td>55</td></tr>
+      <tr><td>Oscar</td><td>Interna: se puede competir en Catálogo</td><td>71</td></tr>
+      <tr><td>Celeste</td><td>Interna: trabajar publicaciones y posicionamiento</td><td>72, 118</td></tr>
+      <tr><td>Joaquín y Germán</td><td>Interna: arrancar de cero y competir</td><td>74</td></tr>
+      <tr><td>Cristian</td><td>Externa: primera venta sin saber nada</td><td>88</td></tr>
+      <tr><td>Marcos y Diego</td><td>Oferta: evolución con acompañamiento</td><td>118</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:14px;color:var(--muted)">Cada caso se cuenta igual: antes, obstáculo, qué hizo, después y aprendizaje. Los datos de cada caso los confirma Nico.</p>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:14px">
+  <h2>Lo que necesitamos de Nico</h2>
+  <ul class="pend">
+    <li><b>Historia de lo que le costó al arrancar</b> (slide 18): un error real, más o menos cuándo, y qué perdió.</li>
+    <li><b>Su epifanía con la conversión</b> (slide 38): una publicación con muchas visitas y pocas ventas, qué descubrió y qué cambió.</li>
+    <li><b>Capturas pendientes:</b> las dos publicaciones del gancho, Catálogo vs. tradicional, ficha de Catálogo, la demo, envíos antes y después.</li>
+    <li><b>Los videos de afuera</b> para el bloque de excusas.</li>
+    <li><b>Vista previa de los 3 regalos.</b></li>
+    <li><b>Bono, garantía o urgencia</b>, solo si son reales.</li>
+    <li><b>QR o link de agenda.</b></li>
+  </ul>
+</section>
+
+<footer>Plano de la versión 2 · basado en Perfect Webinar, Expert Secrets y Epiphany Bridge de Russell Brunson, adaptado a la operación real de Nico.</footer>
+</div>
